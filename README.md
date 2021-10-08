@@ -16,8 +16,8 @@
 https://github.com/MuirlandOracle/CVE-2019-17662
 
 [+] Credentials Found!
-Username:       Atlas
-Password:       H0ldUpTheHe@vens
+Username:       [REDACTED]
+Password:       [REDACTED]
 
 xfreerdp /v:IPaddr /u:USERNAME /p:PASSWORD /cert:ignore +clipboard /dynamic-resolution /drive:share,/tmp
 
