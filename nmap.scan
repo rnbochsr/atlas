@@ -1,0 +1,117 @@
+# Nmap 7.91 scan initiated Sat Oct  2 19:46:08 2021 as: nmap -p- -Pn -sC -sV -A -vv -oN nmap.scan 10.10.189.142
+Increasing send delay for 10.10.189.142 from 0 to 5 due to 22 out of 73 dropped probes since last increase.
+Increasing send delay for 10.10.189.142 from 5 to 10 due to 11 out of 15 dropped probes since last increase.
+Nmap scan report for 10.10.189.142
+Host is up, received user-set (0.089s latency).
+Scanned at 2021-10-02 19:46:08 EDT for 1057s
+Not shown: 65533 filtered ports
+Reason: 65533 no-responses
+PORT     STATE SERVICE       REASON          VERSION
+3389/tcp open  ms-wbt-server syn-ack ttl 125 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: GAIA
+|   NetBIOS_Domain_Name: GAIA
+|   NetBIOS_Computer_Name: GAIA
+|   DNS_Domain_Name: GAIA
+|   DNS_Computer_Name: GAIA
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-10-03T00:03:41+00:00
+| ssl-cert: Subject: commonName=GAIA
+| Issuer: commonName=GAIA
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-08-29T20:56:26
+| Not valid after:  2022-02-28T20:56:26
+| MD5:   4f8e 1595 0ddf 896b f328 382c 74e1 4757
+| SHA-1: 0487 ba8b 71a7 25e4 861d 29bd 0dba dde0 8f63 5038
+| -----BEGIN CERTIFICATE-----
+| MIICzDCCAbSgAwIBAgIQUMxZ1WSDRaRHMk1jQH2EHzANBgkqhkiG9w0BAQsFADAP
+| MQ0wCwYDVQQDEwRHQUlBMB4XDTIxMDgyOTIwNTYyNloXDTIyMDIyODIwNTYyNlow
+| DzENMAsGA1UEAxMER0FJQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+| AMFiXWfKB/B0VcofnYBW/8XnUhE5Y659HIJia9Bk5nlG6g9otdGGSktBPGbP6RtX
+| TuvWYRdmcIMSgiN66yb6Ow62eVVkdSC2vTP6Lc7FzB/Knm7Liud7TBjsWI1y/I4l
+| WsdFnLiZo8yDP+q4WRpHivdrPVGOzuMpMNh7V1sj7k9WToOyHWVWPIhPERdsfHqn
+| 1fwAaqGhu0CF7XMhrutMBwJgSzNlTItuYnSPB6dlqBFabVSZpusPc0liTrDg4Q7n
+| O9p6ous1W008+zH1V9g+Tp6WDRhDVcLTMv90R2K6dvrLnhVkx5XZzf1AWqiLX7Fa
+| xahHm9cJ7WVwYBTV5OZAfGkCAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEw
+| CwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQBzm8kaotMsW9jzDEtKVVEE
+| JahZ+2m09iz6Gn139yz/+mCb62DbnWlGFg1+EbK4T2tvdQKpL+d7zBX9tjSwme8G
+| 4RvO+NrrqMuNCdZzgjRIEajgPK9pA+KdtiLW1IwuPHRCvXWPAJ3nTNvU24DaqpxQ
+| vF7UPvSiVtEXZ4hCY4GWr9Zb9YDRcjBeyNIMURVkfvOB6c2ty7PxSjxi1oEzXiq/
+| IgHS+uYfrpGyB4eQm3DStUkYW3sbmWhEwC9inixHQBnxjmri8s9F+qsAFqpXFaRL
+| ycsKZ3Quxgdk8abypg1VmsLEasRHQww0c8JGQKcPCKK5duCC/SJsALa1c/kqrj34
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-10-03T00:03:44+00:00; 0s from scanner time.
+8080/tcp open  http-proxy    syn-ack ttl 125
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html
+|     Content-Length: 177
+|     Connection: Keep-Alive
+|     <HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD><BODY><H1>404 Not Found</H1>The requested URL nice%20ports%2C/Tri%6Eity.txt%2ebak was not found on this server.<P></BODY></HTML>
+|   GetRequest: 
+|     HTTP/1.1 401 Access Denied
+|     Content-Type: text/html
+|     Content-Length: 144
+|     Connection: Keep-Alive
+|     WWW-Authenticate: Digest realm="ThinVNC", qop="auth", nonce="CjXhCgC35UCI1zcCALflQA==", opaque="iRRMl6u2D70lZwVbxj9RNOqCPd8GpMyLMd"
+|_    <HTML><HEAD><TITLE>401 Access Denied</TITLE></HEAD><BODY><H1>401 Access Denied</H1>The requested URL requires authorization.<P></BODY></HTML>
+| http-auth: 
+| HTTP/1.1 401 Access Denied\x0D
+|_  Digest qop=auth opaque=uPKVxwmwKwfvbP2iOvrte0GEHtU2S8yLO0 nonce=cDQLFQC35UAo5TcCALflQA== realm=ThinVNC
+|_http-favicon: Unknown favicon MD5: CEE00174E844FDFEB7F56192E6EC9F5D
+| http-methods: 
+|_  Supported Methods: GET POST
+|_http-title: 401 Access Denied
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=7%D=10/2%Time=6158F2F7%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,179,"HTTP/1\.1\x20401\x20Access\x20Denied\r\nContent-Type:\x20
+SF:text/html\r\nContent-Length:\x20144\r\nConnection:\x20Keep-Alive\r\nWWW
+SF:-Authenticate:\x20Digest\x20realm=\"ThinVNC\",\x20qop=\"auth\",\x20nonc
+SF:e=\"CjXhCgC35UCI1zcCALflQA==\",\x20opaque=\"iRRMl6u2D70lZwVbxj9RNOqCPd8
+SF:GpMyLMd\"\r\n\r\n<HTML><HEAD><TITLE>401\x20Access\x20Denied</TITLE></HE
+SF:AD><BODY><H1>401\x20Access\x20Denied</H1>The\x20requested\x20URL\x20\x2
+SF:0requires\x20authorization\.<P></BODY></HTML>\r\n")%r(FourOhFourRequest
+SF:,111,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20177\r\nConnection:\x20Keep-Alive\r\n\r\n<HTML><HEAD
+SF:><TITLE>404\x20Not\x20Found</TITLE></HEAD><BODY><H1>404\x20Not\x20Found
+SF:</H1>The\x20requested\x20URL\x20nice%20ports%2C/Tri%6Eity\.txt%2ebak\x2
+SF:0was\x20not\x20found\x20on\x20this\x20server\.<P></BODY></HTML>\r\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): AVtech embedded (87%)
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: AVtech Room Alert 26W environmental monitor (87%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=10/2%OT=3389%CT=%CU=%PV=Y%DS=4%DC=T%G=N%TM=6158F361%P=x86_64-pc-linux-gnu)
+SEQ(SP=100%GCD=1%ISR=108%TI=I%TS=U)
+OPS(O1=M506NW0NNS%O2=M506NW0NNS%O3=M506NW0%O4=M506NW0NNS%O5=M506NW0NNS%O6=M506NNS)
+WIN(W1=FA00%W2=FA00%W3=FA00%W4=FA00%W5=FA00%W6=FA00)
+ECN(R=Y%DF=Y%TG=80%W=FA00%O=M506NW0NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=N)
+
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT      ADDRESS
+1   20.03 ms 10.6.0.1
+2   ... 3
+4   89.27 ms 10.10.189.142
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  2 20:03:45 2021 -- 1 IP address (1 host up) scanned in 1057.02 seconds
