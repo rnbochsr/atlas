@@ -4,13 +4,11 @@
 
 ### NMAP Scan 
 
-Check for running services and open ports.
-
+Check for running services and open ports. I realized after I ran the above command that I didn't need the `-A`. I changed my mind half way through typing it and didn't remove the `-A`.
 ```bash 
 nmap -p- -Pn -sC -sV -A -vv -oN nmap.scan IPaddr
 ```
 
-I realized after I ran the above command that I didn't need the `-A`. I changed my mind half way through typing it and didn't remove the `-A`.
 __*Ports*__
 * 3389 Windows RDP
 * 8080 ThinVNC
