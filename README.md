@@ -4,6 +4,8 @@
 
 ### NMAP Scan 
 
+Check for running services and open ports.
+
 ```bash 
 nmap -p- -Pn -sC -sV -A -vv -oN nmap.scan IPaddr
 ```
